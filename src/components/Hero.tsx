@@ -20,15 +20,15 @@ const Hero = () => {
         </p>
 
         <SocialLink />
-
-        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mt-8">
           <button
-            onClick={() =>
+            onClick={() => {
+              console.log("Button clicked!");
               document
                 .getElementById("projects")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-            className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl glow-effect"
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl glow-effect relative z-10"
           >
             View My Work
           </button>
