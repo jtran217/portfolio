@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const section = ["About", "Experience", "Skills", "Projects"];
+  const section = ["About", "Experience", "Projects", "Skills"];
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {

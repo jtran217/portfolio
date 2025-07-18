@@ -90,7 +90,7 @@ export const projects: Project[] = [
     description:
       "Collaborative mobile app designed to centralize campus events and student engagement.",
     longDescription:
-      "Campus Buddy was created to solve the problem of fragmented campus communication and event discovery. The app provides a centralized platform for students to discover events, connect with peers, and stay engaged with campus life through an intuitive mobile interface.",
+      "Campus Buddy was created to solve the problem of fragmented campus communication and event discovery. It provides a centralized platform for students to discover events, connect with peers, and stay engaged with campus life through an intuitive mobile interface. As your ultimate destination for everything campus life, Campus Buddy keeps you updated on events, enhances social networking, and offers exclusive student deals and discounts from partner businesses — all in one place.",
     technologies: [
       "React Native",
       "TypeScript",
@@ -114,7 +114,7 @@ export const projects: Project[] = [
       "Integrating multiple campus services and data sources",
       "Balancing feature richness with app performance",
     ],
-    githubUrl: "#",
+    githubUrl: "https://github.com/AarshShah9/CampusBuddy",
     liveUrl: "#",
     images: [
       "https://res.cloudinary.com/dittybzbt/image/upload/v1752869964/CampusBuddyOverview_tzykvk.png",
