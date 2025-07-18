@@ -27,15 +27,20 @@ const About = () => {
 
           <div className="space-y-6 order-1 md:order-2">
             <p className="text-slate-300 leading-relaxed">
-              I'm currently in my 4th year of Computer Science, where I've
-              developed a strong foundation in software development, algorithms,
-              and system design. My journey in tech began with curiosity and has
-              evolved into a passion for creating meaningful solutions.
+              I’m a fourth year Computer Science student with a unique
+              background in Molecular Biology. My transition into tech was
+              driven by the excitement of building things that make an impact,
+              turning curiosity into a deep passion for software development.
+              Since then I have completed a software development internship,
+              strengthened my skills in system design, algorithms, and full
+              stack development, and continuously pushed myself through personal
+              projects. I love solving problems, learning new technologies, and
+              turning ideas into working solutions.
             </p>
 
             <p className="text-slate-300 leading-relaxed">
-              Beyond academics, I enjoy working on personal projects, and
-              staying updated with the latest technologies.
+              Beyond academics, I enjoy working on personal projects, reading a
+              good book, and staying updated with the latest technologies.
             </p>
 
             <EducationCard />
