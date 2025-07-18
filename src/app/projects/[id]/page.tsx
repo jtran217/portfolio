@@ -1,19 +1,18 @@
-"use client";
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Github, ExternalLink, ImageIcon, Play } from "lucide-react";
-import { useRouter } from "next/navigation";
 
 interface ProjectDetailProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function ProjectDetail({ params }: ProjectDetailProps) {
-  const router = useRouter();
-  const project = projects.find((p) => p.id === parseInt(params.id));
+export default async function ProjectDetail({ params }: ProjectDetailProps) {
+  const resolvedParams = await params;
+  const project = projects.find((p) => p.id === parseInt(resolvedParams.id));
 
   if (!project) {
     notFound();
@@ -23,13 +22,13 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
     <div className="min-h-screen bg-slate-950/50 backdrop-blur-sm">
       <div className="bg-slate-900/30 backdrop-blur-sm py-8">
         <div className="container mx-auto px-6">
-          <button
-            onClick={() => router.back()}
+          <Link
+            href="/#projects"
             className="flex items-center space-x-2 text-slate-400 hover:text-indigo-400 transition-colors mb-6"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>Back to Projects</span>
-          </button>
+          </Link>
 
           <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
             {project.title}
@@ -95,17 +94,22 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
                 </h2>
                 <div className="grid gap-8">
                   {project.images.map((image, index) => (
-                    <div
+                    <a
                       key={index}
-                      className="bg-slate-800/30   rounded-lg overflow-hidden border border-slate-700/50 hover:border-indigo-500/50 transition-all shadow-xl backdrop-blur-sm cursor-pointer"
-                      onClick={() => window.open(image, "_blank")}
+                      href={image}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-slate-800/30 rounded-lg overflow-hidden border border-slate-700/50 hover:border-indigo-500/50 transition-all shadow-xl backdrop-blur-sm cursor-pointer block"
                     >
-                      <img
+                      <Image
                         src={image}
                         alt={`${project.title} screenshot ${index + 1}`}
+                        width={800}
+                        height={600}
                         className="w-full h-auto max-h-[600px] object-contain hover:scale-105 transition-transform duration-300"
+                        unoptimized
                       />
-                    </div>
+                    </a>
                   ))}
                 </div>
               </section>
