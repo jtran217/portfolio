@@ -14,7 +14,7 @@ const About = () => {
             <div className="relative">
               <div className="w-full max-w-sm mx-auto rounded-lg overflow-hidden bg-slate-800/50 shadow-2xl border border-slate-700/50 backdrop-blur-sm">
                 <img
-                  src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+                  src="https://res.cloudinary.com/dittybzbt/image/upload/v1752871506/IMG_0099_m5fwff.jpg"
                   alt="Working on projects"
                   className="w-full h-64 object-cover"
                 />

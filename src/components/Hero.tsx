@@ -15,8 +15,8 @@ const Hero = () => {
         </h1>
 
         <p className="text-lg text-slate-400 mb-12 max-w-2xl mx-auto">
-          Passionate about creating innovative solutions through code. Building
-          the future one algorithm at a time.
+          Just a developer who enjoys figuring out tricky problems and making
+          things work
         </p>
 
         <SocialLink />

@@ -1,6 +1,9 @@
+"use client";
 import { ExternalLink, Github } from "lucide-react";
 import { projects } from "@/data/projects";
+import { useRouter } from "next/navigation";
 const Projects = () => {
+  const router = useRouter();
   return (
     <section
       id="projects"
@@ -15,7 +18,8 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-slate-800/30 rounded-lg p-6 border border-slate-700/50 hover:border-indigo-500/50 transition-all shadow-xl backdrop-blur-sm card-hover"
+              onClick={() => router.push(`/projects/${project.id}`)}
+              className="bg-slate-800/30 rounded-lg p-6 border border-slate-700/50 hover:border-indigo-500/50 transition-all shadow-xl backdrop-blur-sm card-hover cursor-pointer"
             >
               <h3 className="text-xl font-bold mb-3 text-white">
                 {project.title}

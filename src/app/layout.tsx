@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Johnny Tran Portfolio",
+  title: "Johnny Tran",
 };
 
 export default function RootLayout({
