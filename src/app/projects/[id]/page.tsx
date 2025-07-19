@@ -42,7 +42,8 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
             {project.githubUrl != "#" && (
               <a
                 href={project.githubUrl}
-                className="flex items-center space-x-2 px-6 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-indigo-500/50 transition-all backdrop-blur-sm"
+                target="_blank"
+                className="flex items-center space-x-2 px-6 py-3 text-white bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-indigo-500/50 transition-all backdrop-blur-sm"
               >
                 <Github className="w-5 h-5" />
                 <span>View Code</span>
@@ -51,7 +52,8 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
             {project.liveUrl != "#" && (
               <a
                 href={project.liveUrl}
-                className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all"
+                target="_blank"
+                className="flex items-center space-x-2 px-6 py-3  bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all"
               >
                 <ExternalLink className="w-5 h-5" />
                 <span>Live Demo</span>
@@ -76,7 +78,9 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-6">Technical Challenges</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Technical Challenges
+              </h2>
               <div className="bg-slate-800/30 rounded-lg p-6 border border-slate-700/50 shadow-xl backdrop-blur-sm">
                 <ul className="space-y-3">
                   {project.challenges.map((challenge, index) => (
