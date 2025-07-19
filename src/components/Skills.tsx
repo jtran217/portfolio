@@ -21,7 +21,7 @@ const Skills = () => {
       className="py-20 px-6 bg-slate-950/50 backdrop-blur-sm"
     >
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 gradient-text">
           Technical Skills
         </h2>
 

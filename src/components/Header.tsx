@@ -17,7 +17,9 @@ const Header = () => {
     <header className="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold gradient-text">Johnny Tran</div>
+          <div className="text-xl font-bold text-white  gradient-text">
+            Johnny Tran
+          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">

@@ -19,8 +19,8 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950/50 backdrop-blur-sm">
-      <div className="bg-slate-900/30 backdrop-blur-sm py-8">
+    <div className="min-h-screen bg-gray-900 backdrop-blur-sm">
+      <div className="bg-slate-950/50 backdrop-blur-sm py-8">
         <div className="container mx-auto px-6">
           <Link
             href="/#projects"
@@ -30,7 +30,7 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
             <span>Back to Projects</span>
           </Link>
 
-          <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
+          <h1 className="text-4xl text-white md:text-5xl font-bold gradient-text mb-4">
             {project.title}
           </h1>
 
@@ -65,7 +65,9 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-12">
             <section>
-              <h2 className="text-2xl font-bold mb-6">Project Overview</h2>
+              <h2 className="text-2xl text-white font-bold mb-6">
+                Project Overview
+              </h2>
               <div className="bg-slate-800/30 rounded-lg p-6 border border-slate-700/50 shadow-xl backdrop-blur-sm">
                 <p className="text-slate-300 leading-relaxed">
                   {project.longDescription}
@@ -88,7 +90,7 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
             </section>
             {project.images.length > 0 && (
               <section>
-                <h2 className="text-2xl font-bold mb-6 flex items-center">
+                <h2 className="text-2xl text-white font-bold mb-6 flex items-center">
                   <ImageIcon className="w-6 h-6 mr-3 text-indigo-400" />
                   Screenshots
                 </h2>
@@ -137,7 +139,9 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
 
           <div className="space-y-8">
             <section>
-              <h3 className="text-xl font-bold mb-4">Technologies Used</h3>
+              <h3 className="text-xl text-white font-bold mb-4">
+                Technologies Used
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech, index) => (
                   <span
@@ -151,7 +155,9 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
             </section>
 
             <section>
-              <h3 className="text-xl font-bold mb-4">Key Features</h3>
+              <h3 className="text-xl font-bold text-white mb-4">
+                Key Features
+              </h3>
               <div className="bg-slate-800/30 rounded-lg p-6 border border-slate-700/50 shadow-xl backdrop-blur-sm">
                 <ul className="space-y-3">
                   {project.features.map((feature, index) => (

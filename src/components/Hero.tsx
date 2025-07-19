@@ -11,7 +11,7 @@ const Hero = () => {
         <Profile />
 
         <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          <span className="gradient-text">Johnny Tran</span>
+          <span className="gradient-text text-white">Johnny Tran</span>
         </h1>
 
         <p className="text-lg text-slate-400 mb-12 max-w-2xl mx-auto">
