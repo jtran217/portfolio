@@ -26,17 +26,17 @@ const Projects = () => {
                   {project.title}
                 </h3>
                 <div className="text-slate-400 group-hover:text-indigo-400 transition-colors opacity-60 group-hover:opacity-100">
-                  <svg 
-                    className="w-5 h-5" 
-                    fill="none" 
-                    stroke="currentColor" 
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M9 5l7 7-7 7" 
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
                     />
                   </svg>
                 </div>
@@ -62,6 +62,7 @@ const Projects = () => {
                   {project.githubUrl != "#" && (
                     <a
                       href={project.githubUrl}
+                      target="_blank"
                       onClick={(e) => e.stopPropagation()}
                       className="flex items-center space-x-2 text-slate-400 hover:text-indigo-400 transition-colors"
                     >
@@ -72,6 +73,7 @@ const Projects = () => {
                   {project.liveUrl != "#" && (
                     <a
                       href={project.liveUrl}
+                      target="_blank"
                       onClick={(e) => e.stopPropagation()}
                       className="flex items-center space-x-2 text-slate-400 hover:text-indigo-400 transition-colors"
                     >
@@ -80,20 +82,20 @@ const Projects = () => {
                     </a>
                   )}
                 </div>
-                
+
                 <div className="text-sm text-indigo-400 group-hover:text-indigo-300 font-medium flex items-center space-x-1">
                   <span>View Details</span>
-                  <svg 
-                    className="w-4 h-4 group-hover:translate-x-1 transition-transform" 
-                    fill="none" 
-                    stroke="currentColor" 
+                  <svg
+                    className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M13 7l5 5m0 0l-5 5m5-5H6" 
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
                     />
                   </svg>
                 </div>
